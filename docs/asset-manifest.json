@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/burger/static/css/main.d9e81c65.chunk.css",
+    "main.js": "/burger/static/js/main.d5f64b58.chunk.js",
+    "main.js.map": "/burger/static/js/main.d5f64b58.chunk.js.map",
+    "runtime~main.js": "/burger/static/js/runtime~main.7e2e1d8b.js",
+    "runtime~main.js.map": "/burger/static/js/runtime~main.7e2e1d8b.js.map",
+    "static/js/2.7d0acd69.chunk.js": "/burger/static/js/2.7d0acd69.chunk.js",
+    "static/js/2.7d0acd69.chunk.js.map": "/burger/static/js/2.7d0acd69.chunk.js.map",
+    "index.html": "/burger/index.html",
+    "precache-manifest.0f9c69d642ad19fd1a0066147efba3b4.js": "/burger/precache-manifest.0f9c69d642ad19fd1a0066147efba3b4.js",
+    "service-worker.js": "/burger/service-worker.js",
+    "static/css/main.d9e81c65.chunk.css.map": "/burger/static/css/main.d9e81c65.chunk.css.map",
+    "static/media/burger-logo.png": "/burger/static/media/burger-logo.b8503d26.png"
+  }
+}
