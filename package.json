@@ -2,8 +2,8 @@
   "name": "burger",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://NazDen90.github.io/burger",
   "dependencies": {
+    "axios": "^0.19.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -32,7 +32,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "gh-pages": "^2.0.1"
-  }
+  "devDependencies": {}
 }
