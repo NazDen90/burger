@@ -37,30 +37,16 @@ class BurgerBuilder extends Component {
     };
 
     purchaseContinueHandler = () => {
-        this.setState({
-            loading: true
-        });
-        const order = {
-            ingredients: this.state.ingredients,
-            price: this.state.totalPrice,
-            customer: {
-                name: 'Max',
-                address: {
-                    street: 'Teststreet 1',
-                    country: 'Ukraine'
-                },
-                email: 'test@test.com',
-            },
-            dekiveryMethod: 'fastest'
-        };
-        axios.post('/orders.json', order)
-            .then(resp => this.setState({
-                loading: false, purchasing: false,
-            }))
-            .catch(e => this.setState({
-                loading: false, purchasing: false,
-            }));
-
+        const queryParams = [];
+        for (let i in this.state.ingredients) {
+            queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]))
+        }
+        queryParams.push('price='+this.state.totalPrice);
+        const queryString = queryParams.join('&');
+        this.props.history.push({
+            pathname: '/checkout',
+            search: '?'+queryString
+        })
     };
     purchaseCancelHandler = () => {
         this.setState({purchasing: false})
@@ -104,7 +90,7 @@ class BurgerBuilder extends Component {
             disableInfo[key] = disableInfo[key] <= 0;
         }
         let orderSummary = null;
-        let burger = this.state.error? <p style={{textAlign:'center'}}>Ingredients can't be loaded!</p>:<Spinner/>;
+        let burger = this.state.error ? <p style={{textAlign: 'center'}}>Ingredients can't be loaded!</p> : <Spinner/>;
         if (this.state.ingredients) {
             burger = (
                 <Aux>
